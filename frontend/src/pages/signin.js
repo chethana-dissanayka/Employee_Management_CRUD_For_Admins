@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -16,13 +17,19 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 const defaultTheme = createTheme();
 
 export default function SignIn() {
+    const [error, setError] = useState('');
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
+        const email = data.get('email');
+        const password = data.get('password');
+
+        if (email === 'admin@gmail.com' && password === 'admin') {
+            window.location.href = '/umpage';
+        } else {
+            setError('Invalid email or password');
+        }
     };
 
     return (
@@ -56,7 +63,7 @@ export default function SignIn() {
                         <Avatar sx={{ m: 5, bgcolor: 'secondary.main' }}>
                             <LockOutlinedIcon />
                         </Avatar>
-                        <Typography component="h1" variant="h5" >
+                        <Typography component="h1" variant="h5">
                             WELCOME TO BLAB AGAIN
                         </Typography>
                         <Typography component="h1" variant="h5">
@@ -88,7 +95,12 @@ export default function SignIn() {
                                 label="Remember me"
                                 sx={{ width: '100%', display: 'flex', justifyContent: 'flex-start' }}
                             />
-                            <Button href='/umpage'
+                            {error && (
+                                <Typography color="error" variant="body2" sx={{ width: '100%', textAlign: 'center' }}>
+                                    {error}
+                                </Typography>
+                            )}
+                            <Button
                                 type="submit"
                                 fullWidth
                                 variant="contained"

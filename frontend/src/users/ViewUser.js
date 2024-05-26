@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect,useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import INavbar from "../layout/internalnavbar";
+import Footer from "../layout/footer";
 
 export default function ViewUser() {
   const [user, setUser] = useState({
@@ -21,9 +23,11 @@ export default function ViewUser() {
   };
 
   return (
-    <div className="container">
+    <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <INavbar/>
+    <div className="container" style={{ flex: 1 }} >
       <div className="row">
-        <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
+        <div className="col-md-6 offset-md-3 border rounded p-4 mt-5 shadow " style={{  backgroundColor:"#7ebab8",}}>
           <h2 className="text-center m-4">User Details</h2>
 
           <div className="card">
@@ -50,6 +54,8 @@ export default function ViewUser() {
           </Link>
         </div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 }
