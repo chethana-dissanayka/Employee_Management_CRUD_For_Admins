@@ -48,7 +48,7 @@ export default function AddUser() {
             backgroundColor: "#caeda3"
           
           }}>
-            <h2 className="text-center m-4">User Registration</h2>
+            <h2 className="text-center m-4">New Employee Registration</h2>
 
             <form onSubmit={(e) => onSubmit(e)}>
 

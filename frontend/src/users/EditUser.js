@@ -57,7 +57,7 @@ export default function EditUser() {
             backgroundColor:"#7ebab8",
 
           }}>
-            <h2 className="text-center m-4">Edit User</h2>
+            <h2 className="text-center m-4">Edit Employee Details</h2>
 
             <form onSubmit={(e) => onSubmit(e)}>
 

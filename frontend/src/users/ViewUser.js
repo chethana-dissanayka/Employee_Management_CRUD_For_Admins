@@ -28,7 +28,7 @@ export default function ViewUser() {
     <div className="container" style={{ flex: 1 }} >
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-5 shadow " style={{  backgroundColor:"#7ebab8",}}>
-          <h2 className="text-center m-4">User Details</h2>
+          <h2 className="text-center m-4">Employee Details</h2>
 
           <div className="card">
             <div className="card-header">

@@ -108,18 +108,6 @@ export default function SignIn() {
                             >
                                 Sign In
                             </Button>
-                            <Grid container sx={{ width: '100%' }}>
-                                <Grid item xs sx={{ textAlign: 'left' }}>
-                                    <Link href="/" variant="body2">
-                                        Forgot password?
-                                    </Link>
-                                </Grid>
-                                <Grid item sx={{ textAlign: 'left' }}>
-                                    <Link href="/signup" variant="body2">
-                                        {"Don't have an account? Sign Up"}
-                                    </Link>
-                                </Grid>
-                            </Grid>
                         </Box>
                     </Box>
                 </Grid>

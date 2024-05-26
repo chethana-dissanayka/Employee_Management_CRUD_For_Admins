@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import SignIn from './pages/signin';
-import SignUp from './pages/signup';
 import UMpage from './pages/UMpage';
 import AddUser from './users/AddUser';
 import EditUser from './users/EditUser';
@@ -17,7 +16,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn/>}/>
-          <Route path="/signup" element={<SignUp/>}/>
           <Route path="/umpage" element={<UMpage/>}/>
           <Route path="/adduser" element={<AddUser/>}/>
           <Route path="/edituser/:id" element={<EditUser/>}/>
