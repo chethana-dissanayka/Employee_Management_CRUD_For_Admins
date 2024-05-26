@@ -136,6 +136,14 @@ function UMNavBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
+
+          <Button
+                            color="inherit"
+                            href="/"
+                            style={{ backgroundColor: 'lightblue', marginRight: '5px' }}
+                        >
+                            Logout
+                        </Button>
             <Button color="inherit" href="/adduser" style={{ backgroundColor: 'lightblue' }}>
               Add User
             </Button>
