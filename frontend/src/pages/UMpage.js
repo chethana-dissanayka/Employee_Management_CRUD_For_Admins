@@ -1,7 +1,8 @@
 import React from 'react';
-import UMNavBar from '../layout/UMNavbar';
-import TableUser from '../layout/table';
-import Footer from '../layout/footer';
+import UMNavBar from '../component/UMNavbar';
+import TableUser from '../component/table';
+import Footer from '../component/footer';
+
 
 export default function UMpage() {
   return (
@@ -15,9 +16,7 @@ export default function UMpage() {
       <div style={{ flex: 1 }}>
         <TableUser />
       </div>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer/>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect,useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import INavbar from "../layout/internalnavbar";
-import Footer from "../layout/footer";
+import INavbar from "../component/internalnavbar";
+import Footer from "../component/footer";
 
 export default function ViewUser() {
   const [user, setUser] = useState({

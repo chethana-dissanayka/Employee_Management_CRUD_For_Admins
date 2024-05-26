@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import INavbar from "../layout/internalnavbar";
-import Footer from "../layout/footer";
+import INavbar from "../component/internalnavbar";
+import Footer from "../component/footer";
 
 export default function EditUser() {
   let navigate = useNavigate();
